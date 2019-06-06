@@ -32,15 +32,15 @@ function result() {
 
     if (customName.value !== '') {
         var name = customName.value;
-        var newName = storyText.replace('Bob', name)
+        newStory = newStory.replace('Bob', name)
 
     }
 
     if (document.getElementById("uk").checked) {
-        var weight = (Math.round(300 * 0.071429) + ' stone');
-        var temperature = (Math.round((94 - 32) * (5 / 9)) + ' centigrade');
-        var newWeight = storyText.replace('300 pounds', weight);
-        var newTemp = storyText.replace('94 fahrenheit', temperature);
+        var weight = Math.round(300 * 0.071429) + ' stone';
+        var temperature = Math.round((94 - 32) * (5 / 9)) + ' centigrade';
+        newStory = newStory.replace('94 fahrenheit', temperature);
+        newStory = newStory.replace('300 pounds', weight);
     }
 
     story.textContent = newStory;
